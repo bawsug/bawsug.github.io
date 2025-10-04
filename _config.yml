@@ -22,7 +22,7 @@ title: Boulder AWS User Group
 description: >- # this means to ignore newlines until "baseurl:"
   We're a community of cloud developers, infra ops, devops and builders. 
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "bawsug.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://bawsug.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
 # github_username:  jekyll
 
