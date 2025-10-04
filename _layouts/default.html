@@ -29,8 +29,10 @@
 
       <!-- LinkedIn link -->
         {% if site.linkedin %}
-        <p class="icon-link-item"><a href="{{ site.linkedin }}" class="icon-link" itemprop="sameAs">{% include icon-linkedin.html %}</p>
+        <p class="icon-link-item"><a href="{{ site.linkedin }}" class="icon-link" itemprop="sameAs">{% include icon-linkedin.html %}</a></p>
         {% endif %}
+
+        <p><a href="https://www.meetup.com/boulder-aws-amazon-web-services/">Join our Meetup Group</a></p>
 
         {% if site.show_downloads %}
         <ul class="downloads">
@@ -49,6 +51,7 @@
         {% if site.github.is_project_page %}
         <p>This project is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
         {% endif %}
+        <p><a href="/code-of-conduct/">Code of Conduct</a></p>
       </footer>
     </div>
     <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>

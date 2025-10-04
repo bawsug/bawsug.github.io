@@ -16,6 +16,9 @@ layout: default
   <p>{{ page.speaker.name }}</p>
   <p><img src="{{ page.speaker.photo | relative_url }}" alt="{{ page.speaker.name }}" style="width: 100px; border-radius: 8px;"></p>
   <p>Topic: {{ page.talk.topic }}</p>
+  {% if page.talk.event_link %}
+  <p><a href="{{ page.talk.event_link }}">Meetup Event</a></p>
+  {% endif %}
   {% if page.speaker.bio_link %}
   <p>
     <a href="{{ page.speaker.bio_link }}">

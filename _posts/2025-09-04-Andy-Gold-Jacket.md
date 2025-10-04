@@ -11,6 +11,7 @@ speaker:
 talk:
   topic: "AWS Certifications"
   level: "All Levels"
+  event_link: "https://www.meetup.com/boulder-aws-amazon-web-services/events/310711448/"
 tags: [aws, certifications]
 ---
 

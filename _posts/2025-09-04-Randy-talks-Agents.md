@@ -11,6 +11,7 @@ speaker:
 talk:
   topic: "AI Agents"
   level: "Intermediate"
+  event_link: "https://www.meetup.com/boulder-aws-amazon-web-services/events/311203284/"
 tags: [aws, ai, agents]
 ---
 
