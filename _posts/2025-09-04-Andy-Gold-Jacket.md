@@ -16,3 +16,7 @@ tags: [aws, certifications]
 ---
 
 Andy shared his journey of earning all AWS certifications and strategies for success. He concluded his talk by revealing the coveted gold jacket - a special prize awarded to those who pass all AWS certifications.
+
+
+
+![](/assets/img/andy_gold_jacket.jpg)
