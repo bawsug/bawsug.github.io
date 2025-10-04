@@ -4,7 +4,7 @@ title: "Randy talks about the bots"
 date: 2025-10-02
 speaker:
   name: "Randy DeFauw"
-  photo: "/assets/img/randy-defauw.jpg"
+  photo: "/assets/img/hyperbadge_rddefauw.png"
   bio_link: "https://www.linkedin.com/in/randalldefauw/"
   company: "AWS"
   title: "Sr. Principal Solutions Architect"
