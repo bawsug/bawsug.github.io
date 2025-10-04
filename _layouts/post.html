@@ -5,7 +5,7 @@ layout: default
 <small>{{ page.date | date: "%-d %B %Y" }}</small>
 <h1>{{ page.title }}</h1>
 
-<p class="view">by {{ page.author | default: site.author }}</p>
+<p class="view">by {{ page.speaker.name | default: site.author }}</p>
 
 {{content}}
 
@@ -13,9 +13,16 @@ layout: default
 <hr>
 <div class="speaker-info">
   <h3>Speaker</h3>
-  <p>• {{ page.speaker.name }}</p>
-  <p>• {{ page.speaker.photo }}</p>
-  <p>• {{ page.talk.topic }}</p>
+  <p>{{ page.speaker.name }}</p>
+  <p><img src="{{ page.speaker.photo | relative_url }}" alt="{{ page.speaker.name }}" style="width: 100px; border-radius: 8px;"></p>
+  <p>Topic: {{ page.talk.topic }}</p>
+  {% if page.speaker.bio_link %}
+  <p>
+    <a href="{{ page.speaker.bio_link }}">
+      {% include icon-linkedin.html %}
+    </a>
+  </p>
+  {% endif %}
 </div>
 {% endif %}
 
