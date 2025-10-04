@@ -20,7 +20,12 @@
 
 title: Boulder AWS User Group
 description: >- # this means to ignore newlines until "baseurl:"
-  We're a community of cloud developers, infra ops, devops and builders. 
+  Welcome to the Boulder AWS User Group! We're an inclusive community that brings together 
+  anyone interested in cloud computing and AWS technologies. Whether you're a seasoned cloud 
+  developer, infrastructure engineer, DevOps professional, student exploring tech careers, 
+  or hobbyist tinkering with AWS in your spare time - you belong here. Our group welcomes 
+  all skill levels and backgrounds, fostering learning, networking, and knowledge sharing 
+  in a supportive environment. 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://bawsug.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
