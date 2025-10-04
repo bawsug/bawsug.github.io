@@ -16,3 +16,5 @@ tags: [aws, ai, agents]
 ---
 
 Randy walked us through the current GenAI agentic landscape and the challenges organizations face in the agentic world.
+
+![](/assets/img/randy_agents.jpg)
