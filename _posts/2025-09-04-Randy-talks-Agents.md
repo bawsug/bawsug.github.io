@@ -15,4 +15,4 @@ talk:
 tags: [aws, ai, agents]
 ---
 
-Randy DeFauw scares us with a future of bots that process our AP.
+Randy walked us through the current GenAI agentic landscape and the challenges organizations face in the agentic world.

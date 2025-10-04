@@ -15,4 +15,4 @@ talk:
 tags: [aws, certifications]
 ---
 
-Andy has all the certs! Do you?
+Andy shared his journey of earning all AWS certifications and strategies for success. He concluded his talk by revealing the coveted gold jacket - a special prize awarded to those who pass all AWS certifications.
