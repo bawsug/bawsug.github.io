@@ -13,4 +13,4 @@ layout: default
   {% endfor %}
 </ul>
 
-
+<p><a href="/code-of-conduct/">Code of Conduct</a></p>
