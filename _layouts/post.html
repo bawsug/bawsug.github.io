@@ -9,6 +9,16 @@ layout: default
 
 {{content}}
 
+{% if page.speaker %}
+<hr>
+<div class="speaker-info">
+  <h3>Speaker</h3>
+  <p>• {{ page.speaker.name }}</p>
+  <p>• {{ page.speaker.photo }}</p>
+  <p>• {{ page.talk.topic }}</p>
+</div>
+{% endif %}
+
 {% if page.tags %}
   <small>tags: <em>{{ page.tags | join: "</em> - <em>" }}</em></small>
 {% endif %}
