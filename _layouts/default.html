@@ -28,15 +28,14 @@
         <p class="view"><a href="{{ site.github.repository_url }}">View the Project on GitHub <small>{{ site.github.repository_nwo }}</small></a></p>
         {% endif %}
 
-      <!-- LinkedIn link -->
-        {% if site.linkedin %}
-        <p class="icon-link-item"><a href="{{ site.linkedin }}" class="icon-link" itemprop="sameAs">{% include icon-linkedin.html %}</a></p>
-        {% endif %}
-
-        <!-- Slack invite link -->
-        <p class="icon-link-item"><a href="https://forms.gle/Qu5EzU3YyCHa9RA66" class="icon-link"><img src="/assets/icons/slack.png" alt="Join Slack" style="width: 20px; height: 20px;"> Join us on slack and continue the conversation</a></p>
-
-        <p><a href="https://www.meetup.com/boulder-aws-amazon-web-services/"><img src="/assets/icons/meetup.webp" alt="Meetup" style="width: 20px; height: 20px;"> Join our Meetup Group</a></p>
+      <!-- Social icons -->
+        <div style="display: flex; gap: 10px; align-items: center; margin: 10px 0;">
+          {% if site.linkedin %}
+          <a href="{{ site.linkedin }}" class="icon-link" itemprop="sameAs" title="LinkedIn Group">{% include icon-linkedin.html %}</a>
+          {% endif %}
+          <a href="https://forms.gle/Qu5EzU3YyCHa9RA66" class="icon-link" title="Join Slack"><img src="/assets/icons/slack.png" alt="Join Slack" style="width: 20px; height: 20px;"></a>
+          <a href="https://www.meetup.com/boulder-aws-amazon-web-services/" title="Join Meetup Group"><img src="/assets/icons/meetup.webp" alt="Meetup" style="width: 20px; height: 20px;"></a>
+        </div>
 
         {% if site.show_downloads %}
         <ul class="downloads">
