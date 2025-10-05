@@ -64,7 +64,7 @@ defaults:
     values:
       image: /assets/icons/bawsug.png
       author: Boulder AWS User Group
-  - jekyll-remote-theme
+
 linkedin: https://www.linkedin.com/groups/15184031
 logo: /assets/icons/bawsug.png
 # Exclude from processing.
