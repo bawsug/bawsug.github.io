@@ -19,15 +19,22 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Boulder AWS User Group
+email: organizers@bawsug.org
 description: >- # this means to ignore newlines until "baseurl:"
   Welcome to the Boulder AWS User Group! We're an inclusive community that brings together 
   anyone interested in cloud computing and AWS technologies. Whether you're a seasoned cloud 
   developer, infrastructure engineer, DevOps professional, student exploring tech careers, 
   or hobbyist tinkering with AWS in your spare time - you belong here. Our group welcomes 
   all skill levels and backgrounds, fostering learning, networking, and knowledge sharing 
-  in a supportive environment. 
+  in a supportive environment.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://bawsug.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+
+# SEO and social media
+tagline: "Boulder's Premier AWS Community"
+keywords: "AWS, cloud computing, Boulder, Denver, user group, meetup, DevOps, serverless, containers"
+lang: en_US
+timezone: America/Denver
 # twitter_username: jekyllrb
 # github_username:  jekyll
 
@@ -35,6 +42,28 @@ url: "https://bawsug.github.io" # the base hostname & protocol for your site, e.
 theme: jekyll-theme-minimal
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
+
+# SEO Configuration
+logo: /assets/icons/bawsug.png
+social:
+  name: Boulder AWS User Group
+  links:
+    - https://www.meetup.com/boulder-aws-users-group/
+    - https://www.linkedin.com/company/boulder-aws-user-group/
+
+# Organization details for SEO
+author:
+  name: Boulder AWS User Group
+  url: https://bawsug.github.io
+
+# Default SEO settings
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /assets/icons/bawsug.png
+      author: Boulder AWS User Group
   - jekyll-remote-theme
 linkedin: https://www.linkedin.com/groups/15184031
 logo: /assets/icons/bawsug.png
