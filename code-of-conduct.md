@@ -4,6 +4,9 @@ title: Code of Conduct
 permalink: /code-of-conduct/
 ---
 
+<h1>{{ page.title }}</h1>
+
+
 ## Our Guiding Principle 🌟
 
 We are all builders who share a passion for technology and the cloud. This common ground unites us in learning, creating, and innovating together.
