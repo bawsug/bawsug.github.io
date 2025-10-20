@@ -87,3 +87,4 @@ exclude:
   - vendor/gems/
   - vendor/ruby/
 favicon: /assets/icons/bawsug.png
+future: enabled
