@@ -6,6 +6,7 @@ permalink: /code-of-conduct/
 
 <h1>{{ page.title }}</h1>
 
+---
 
 ## Our Guiding Principle 🌟
 

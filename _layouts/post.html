@@ -13,18 +13,13 @@ layout: default
 <hr>
 <div class="speaker-info">
   <h3>Speaker</h3>
-  <p>{{ page.speaker.name }}</p>
+  <p>{{ page.speaker.name }}     {% if page.speaker.bio_link %} <a href="{{ page.speaker.bio_link }}">    {% include icon-linkedin.html %}</a></p>
+
+  {% endif %}
   <p><img src="{{ page.speaker.photo | relative_url }}" alt="{{ page.speaker.name }}" style="width: 100px; border-radius: 8px;"></p>
   <p>Topic: {{ page.talk.topic }}</p>
   {% if page.talk.event_link %}
   <p><a href="{{ page.talk.event_link }}">Meetup Event</a></p>
-  {% endif %}
-  {% if page.speaker.bio_link %}
-  <p>
-    <a href="{{ page.speaker.bio_link }}">
-      {% include icon-linkedin.html %}
-    </a>
-  </p>
   {% endif %}
 </div>
 {% endif %}
