@@ -4,7 +4,7 @@ title: "The Programs, the People, the Process"
 date: 2025-11-06
 speaker:
   name: "Scott Campbell"
-  photo: "/assets/img/ScottCampbell.jpeg"
+  photo: "/assets/img/ScottCampbell.jpg"
   bio_link: "https://www.linkedin.com/in/scott-d-campbell-b91b6538/"
   company: "nClouds"
   title: "Sr Solutions Consultant"
