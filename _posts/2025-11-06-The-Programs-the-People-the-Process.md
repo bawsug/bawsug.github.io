@@ -22,4 +22,5 @@ What does a modern security program look like inside AWS?
 - Tooling (Security Hub, Inspector)
 - Managed security models
 - Operational readiness
+
 Also, an introduction to AWS security foundations through the Well-Architected Framework (WAFR) lens.
