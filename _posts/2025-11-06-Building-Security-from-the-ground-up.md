@@ -2,6 +2,7 @@
 layout: post
 title: "Building AWS Security From The Ground Up"
 date: 2025-11-06
+published: false
 canceled: false
 speaker:
   name: "Tyler Jacox"
