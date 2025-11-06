@@ -1,6 +1,7 @@
 ---
 layout: default
 title: "List of Meetups and Talks"
+canceled: false
 ---
 
 
@@ -10,7 +11,7 @@ title: "List of Meetups and Talks"
 
 
 {% for post in site.posts %}
-  <li class="mv2">
+  <li class="mv2 {% if post.canceled %}canceled-wrapper{% endif %}">
     <a href="{{ post.url | relative_url }}" class="db pv1 link blue hover-mid-gray">
       <time class="fr silver ttu">{{ post.date | date_to_string }} </time>
       {{ post.title }}

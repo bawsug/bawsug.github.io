@@ -2,6 +2,7 @@
 layout: post
 title: "The Programs, the People, the Process"
 date: 2025-11-06
+canceled: true
 speaker:
   name: "Scott Campbell"
   photo: "/assets/img/ScottCampbell.jpg"
