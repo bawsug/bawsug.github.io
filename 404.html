@@ -8,18 +8,95 @@ layout: default
     margin: 10px auto;
     max-width: 600px;
     text-align: center;
+    padding: 2em;
   }
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
+
+  .error-code {
+    font-size: 10em;
+    font-weight: 900;
+    margin: 0;
+    background: linear-gradient(135deg, #FF9900 0%, #232F3E 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradient-shift 3s ease infinite;
+    text-shadow: 0 0 30px rgba(255, 153, 0, 0.3);
+  }
+
+  @keyframes gradient-shift {
+    0%, 100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+
+  .error-message {
+    font-size: 2em;
+    font-weight: 700;
+    color: #232F3E;
+    margin: 1em 0 0.5em;
+    animation: fade-in 1s ease-in;
+  }
+
+  .error-description {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 2em;
+    animation: fade-in 1.5s ease-in;
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .home-link {
+    display: inline-block;
+    padding: 12px 30px;
+    background: linear-gradient(135deg, #FF9900, #FF6600);
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 153, 0, 0.3);
+    animation: fade-in 2s ease-in;
+  }
+
+  .home-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 153, 0, 0.4);
+    background: linear-gradient(135deg, #FF6600, #FF9900);
+  }
+
+  .cloud-icon {
+    font-size: 3em;
+    margin: 1em 0;
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
   }
 </style>
 
 <div class="container">
-  <h1>404</h1>
-
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
+  <h1 class="error-code">404</h1>
+  <div class="cloud-icon">☁️</div>
+  <p class="error-message">Page Not Found</p>
+  <p class="error-description">Looks like this page is lost in the cloud...</p>
+  <a href="/" class="home-link">Return Home</a>
 </div>
