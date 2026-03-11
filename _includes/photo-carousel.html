@@ -1,0 +1,156 @@
+{% comment %}
+  Photo Carousel Include
+  Usage: {% include photo-carousel.html images=page.gallery id="my-carousel" %}
+  Each image in the array should have: src, alt (optional)
+{% endcomment %}
+
+{% assign carousel_id = include.id | default: "photo-carousel" %}
+
+<div class="carousel" id="{{ carousel_id }}">
+  <div class="carousel-track">
+    {% for img in include.images %}
+    <div class="carousel-slide{% if forloop.first %} active{% endif %}">
+      <img src="{{ img.src | relative_url }}" alt="{{ img.alt | default: 'Event photo' }}" loading="lazy">
+    </div>
+    {% endfor %}
+  </div>
+  <button class="carousel-btn carousel-btn--prev" aria-label="Previous photo">&lsaquo;</button>
+  <button class="carousel-btn carousel-btn--next" aria-label="Next photo">&rsaquo;</button>
+  <div class="carousel-dots">
+    {% for img in include.images %}
+    <button class="carousel-dot{% if forloop.first %} active{% endif %}" aria-label="Go to photo {{ forloop.index }}" data-index="{{ forloop.index0 }}"></button>
+    {% endfor %}
+  </div>
+  <div class="carousel-counter">
+    <span class="carousel-current">1</span> / <span class="carousel-total">{{ include.images | size }}</span>
+  </div>
+</div>
+
+<style>
+.carousel {
+  position: relative;
+  max-width: 720px;
+  margin: 2rem auto;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #111;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+}
+.carousel-track {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4/3;
+}
+.carousel-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.45s ease;
+}
+.carousel-slide.active {
+  opacity: 1;
+}
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  border: none;
+  font-size: 2rem;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+  z-index: 2;
+  line-height: 1;
+  padding: 0 0 2px 0;
+}
+.carousel-btn:hover {
+  background: rgba(0,0,0,0.8);
+}
+.carousel-btn--prev { left: 10px; }
+.carousel-btn--next { right: 10px; }
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 0;
+  background: rgba(0,0,0,0.4);
+}
+.carousel-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid rgba(255,255,255,0.6);
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.2s;
+}
+.carousel-dot.active {
+  background: #fff;
+  border-color: #fff;
+}
+.carousel-counter {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  background: rgba(0,0,0,0.55);
+  color: #fff;
+  font-size: 0.8rem;
+  padding: 4px 10px;
+  border-radius: 20px;
+  z-index: 2;
+}
+</style>
+
+<script>
+(function() {
+  var el = document.getElementById('{{ carousel_id }}');
+  var slides = el.querySelectorAll('.carousel-slide');
+  var dots = el.querySelectorAll('.carousel-dot');
+  var counter = el.querySelector('.carousel-current');
+  var idx = 0;
+
+  function go(n) {
+    slides[idx].classList.remove('active');
+    dots[idx].classList.remove('active');
+    idx = (n + slides.length) % slides.length;
+    slides[idx].classList.add('active');
+    dots[idx].classList.add('active');
+    counter.textContent = idx + 1;
+  }
+
+  el.querySelector('.carousel-btn--prev').onclick = function() { go(idx - 1); };
+  el.querySelector('.carousel-btn--next').onclick = function() { go(idx + 1); };
+  dots.forEach(function(dot) {
+    dot.onclick = function() { go(+this.dataset.index); };
+  });
+
+  // Swipe support
+  var startX;
+  el.addEventListener('touchstart', function(e) { startX = e.touches[0].clientX; }, {passive: true});
+  el.addEventListener('touchend', function(e) {
+    var diff = startX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 40) go(idx + (diff > 0 ? 1 : -1));
+  });
+
+  // Keyboard
+  el.setAttribute('tabindex', '0');
+  el.addEventListener('keydown', function(e) {
+    if (e.key === 'ArrowLeft') go(idx - 1);
+    if (e.key === 'ArrowRight') go(idx + 1);
+  });
+})();
+</script>
