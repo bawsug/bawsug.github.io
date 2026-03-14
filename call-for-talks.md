@@ -75,8 +75,10 @@ Lightning talks are a great way to get your feet wet with presenting, spark conv
 
 ---
 
-## Interested?
+## Ready to Submit?
 
-Reach out to any member of the [Steering Committee](/steering-committee/) or drop a message in our [Slack workspace](https://join.slack.com/t/boulderaws/shared_invite/zt-3e1fgu85d-NbmWg5w4BKF03tGJiyrTbQ). We'll help you shape your topic, pick a date, and get you on the schedule.
+**[Submit your talk proposal here](https://forms.gle/2dfP8iGoJ83nsLrw8)**
+
+Not sure if your idea is ready? Reach out to any member of the [Steering Committee](/steering-committee/) or drop a message in our [Slack workspace](https://join.slack.com/t/boulderaws/shared_invite/zt-3e1fgu85d-NbmWg5w4BKF03tGJiyrTbQ). We'll help you shape your topic, pick a date, and get you on the schedule.
 
 All experience levels welcome. Seriously.
