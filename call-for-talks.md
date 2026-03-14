@@ -10,6 +10,16 @@ permalink: /call-for-talks/
 
 We're looking for speakers! Whether you're a seasoned presenter or it's your first time in front of a crowd, BAWSUG wants to hear from you. Any tech talk is welcome — cloud, security, DevOps, AI/ML, infrastructure, automation, you name it.
 
+### A quick note on how we pick talks
+
+BAWSUG is a **community-first** group. That means talks from people in the community — folks building things, solving problems, and learning in the trenches — will always come first. Always. Even over talks delivered by AWS themselves.
+
+We know vendors have great things to share, and we're not closing the door on that. If you're a vendor and you have something genuinely useful to present, we'll absolutely consider it. But we're never going to bump a community member's talk to make room for a product pitch. That's just not who we are.
+
+So if you've been on the fence about submitting — don't be. Your story matters more here than any polished keynote.
+
+---
+
 We have two formats to fit your story:
 
 ---
