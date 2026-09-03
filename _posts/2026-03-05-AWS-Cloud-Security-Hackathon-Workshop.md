@@ -3,16 +3,15 @@ layout: post
 title: "AWS Cloud Security: Hackathon Workshop"
 date: 2026-03-05
 canceled: false
-speaker:
-  name: "Scott Campbell"
-  photo: "/assets/img/LouisvilleHackathonInvite.png"
-  bio_link: "https://www.linkedin.com/in/scott-d-campbell-b91b6538/"
-  company: "nClouds"
-  title: ""
-talk:
-  topic: "AWS Cloud Security: Hackathon Workshop"
-  level: "Intermediate"
-  event_link: ""
+talks:
+  - topic: "AWS Cloud Security: Hackathon Workshop"
+    level: "Intermediate"
+    speakers:
+      - name: "Scott Campbell"
+        company: "nClouds"
+        title: "Sr Solutions Consultant"
+        photo: "/assets/img/ScottCampbell.jpg"
+        bio_link: "https://www.linkedin.com/in/scott-d-campbell-b91b6538/"
 tags: [aws, cloud_security, hackathon, workshop]
 gallery:
   - src: /assets/img/2026-03-05/15001.jpg

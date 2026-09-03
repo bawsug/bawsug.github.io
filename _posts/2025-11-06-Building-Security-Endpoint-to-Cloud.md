@@ -1,25 +1,58 @@
 ---
 layout: post
-title: "Building AWS Security From The Ground Up"
+title: "AWS Cloud Security Night"
 date: 2025-11-06
 canceled: false
-speaker:
-  name: "Jason Bovée"
-  photo: "/assets/img/JasonBovee.jpeg"
-  bio_link: "https://www.linkedin.com/in/jasonbovee/"
-  company: "Istonish"
-  title: "VP of Client Partnerships"
-talk:
-  topic: "Building AWS Security From The Ground Up"
-  level: "Intermediate"
-  event_link: "https://www.meetup.com/boulderawsusergroup/events/311623458/"
+event_link: "https://www.meetup.com/boulderawsusergroup/events/311623458/"
+talks:
+  - topic: "Cybersecurity from Endpoint to Cloud"
+    level: "Intermediate"
+    speakers:
+      - name: "Jason Bovée"
+        company: "Istonish"
+        title: "VP of Client Partnerships"
+        photo: "/assets/img/JasonBovee.jpeg"
+        bio_link: "https://www.linkedin.com/in/jasonbovee/"
+  - topic: "Building AWS Security From The Ground Up"
+    level: "Intermediate"
+    speakers:
+      - name: "Tyler Jacox"
+        company: "MasterControl"
+        title: "CISO"
+        photo: "/assets/img/TylerJacox.jpeg"
+        bio_link: "https://www.linkedin.com/in/tyler-jacox/"
+  - topic: "The Programs, the People, the Process"
+    level: "Intermediate"
+    speakers:
+      - name: "Scott Campbell"
+        company: "nClouds"
+        title: "Sr Solutions Consultant"
+        photo: "/assets/img/ScottCampbell.jpg"
+        bio_link: "https://www.linkedin.com/in/scott-d-campbell-b91b6538/"
 tags: [aws, cloud_security]
 ---
 
-Building AWS Security From The Ground Up
+Three talks on building AWS security — from the endpoint all the way up to a mature security program.
 
+## The Talks
+
+### Cybersecurity from Endpoint to Cloud — Jason Bovée
 
 Explore how cybersecurity starts at the endpoint and scales to the cloud, covering practical strategies for identity management, access control, least privilege, encryption, and compliance readiness. We'll connect everyday cybersecurity practices to cloud configurations and emerging insurance requirements, helping attendees understand how to secure systems efficiently and align with industry standard IT and cybersecurity frameworks.
+
+### Building AWS Security From The Ground Up — Tyler Jacox
+
+How to build and set up AWS security from the very beginning. This talk covers the early challenges of establishing a security culture, hiring specialized talent for the cloud, and setting up fundamental policies in line with both internal objectives and external certifications like FedRAMP and ISO 42001. Attendees gain insights into scaling a security program efficiently within AWS while aligning to high-stakes industry regulations.
+
+### The Programs, the People, the Process — Scott Campbell
+
+What does a modern security program look like inside AWS?
+
+- Tooling (Security Hub, Inspector)
+- Managed security models
+- Operational readiness
+
+Also, an introduction to AWS security foundations through the Well-Architected Framework (WAFR) lens.
 
 ## Meetup Highlights
 

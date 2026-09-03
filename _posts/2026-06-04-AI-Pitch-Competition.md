@@ -3,10 +3,6 @@ layout: post
 title: "Startup & Small Business AI Pitch Competition"
 date: 2026-06-04
 canceled: false
-talk:
-  topic: "Startup & Small Business AI Pitch Competition"
-  level: "All Levels"
-  event_link: ""
 tags: [aws, pitch, startup, small_business, ai]
 ---
 

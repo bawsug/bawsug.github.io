@@ -2,16 +2,16 @@
 layout: post
 title: "Andy Talks the gold Jacket"
 date: 2025-09-04
-speaker:
-  name: "Andy Van Becelaere"
-  photo: "/assets/img/hyperbadge_avanbece.png"
-  bio_link: "https://www.linkedin.com/in/andyvanb/"
-  company: "AWS"
-  title: "Solutions Architect"
-talk:
-  topic: "AWS Certifications"
-  level: "All Levels"
-  event_link: "https://www.meetup.com/boulder-aws-amazon-web-services/events/310711448/"
+event_link: "https://www.meetup.com/boulder-aws-amazon-web-services/events/310711448/"
+talks:
+  - topic: "AWS Certifications"
+    level: "All Levels"
+    speakers:
+      - name: "Andy Van Becelaere"
+        company: "AWS"
+        title: "Solutions Architect"
+        photo: "/assets/img/hyperbadge_avanbece.png"
+        bio_link: "https://www.linkedin.com/in/andyvanb/"
 tags: [aws, certifications]
 ---
 

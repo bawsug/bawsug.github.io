@@ -3,10 +3,17 @@ layout: post
 title: "FinOps: Turn Your Cloud Bill Into a Strategic Superpower"
 date: 2026-09-03
 canceled: false
-talk:
-  topic: "FinOps"
-  level: "All Levels"
-  event_link: "https://www.meetup.com/boulderawsusergroup/events/315761108/"
+event_link: "https://www.meetup.com/boulderawsusergroup/events/315761108/"
+talks:
+  - topic: "FinOps"
+    level: "All Levels"
+    speakers:
+      - name: "Erika Simon"
+        company: "LucidPoint"
+        title: "Head of Sales & Marketing"
+      - name: "Mike Fontaine"
+        company: "LucidPoint"
+        title: "Chief Executive Officer"
 tags: [aws, finops, cost_optimization, governance, tagging]
 ---
 
@@ -31,11 +38,11 @@ Doors open at 6:00 PM. Eat, drink, and network for about 20 minutes, then we sta
 
 ## Speakers
 
-**Erika Simon** | Head of Sales & Marketing, LucidPoint
+**Erika Simon**
 
 Erika Simon leads sales and marketing strategy at LucidPoint, driving go-to-market execution and strategic partnerships across the AWS ecosystem. She specializes in bridging the gap between cloud technology and measurable business impact, helping enterprise leaders articulate ROI, accelerate adoption, and commercialize cloud initiatives. With extensive experience in technology positioning and customer growth, Erika focuses on translating complex AWS capabilities into clear, high-growth strategies for clients.
 
-**Mike Fontaine** | Chief Executive Officer, LucidPoint
+**Mike Fontaine**
 
 As CEO of LucidPoint, Mike Fontaine guides enterprise leaders through high-stakes cloud transformations and strategic AWS adoption. Prior to leading LucidPoint, Mike served as a U.S. Air Force leader and F-15 fighter pilot, where he built a foundation in operational discipline, rapid decision-making, and high-reliability environments. Today, he translates that elite aviation background into helping technology executives align AWS innovation with core business strategy, cloud economics, and organizational resilience.
 
