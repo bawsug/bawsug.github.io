@@ -15,6 +15,15 @@ talks:
         company: "LucidPoint"
         title: "Chief Executive Officer"
 tags: [aws, finops, cost_optimization, governance, tagging]
+gallery:
+  - src: /assets/img/2026-09-03/PXL_20260904_003629978.jpg
+    alt: "Wide view of the Rule 4 great room with attendees seated for a slide on AWS database options"
+  - src: /assets/img/2026-09-03/PXL_20260904_004907720.jpg
+    alt: "Presenter walking the room through a slide titled Understanding Durability"
+  - src: /assets/img/2026-09-03/PXL_20260904_005833056.jpg
+    alt: "Mike Fontaine of LucidPoint introducing himself next to his About slide"
+  - src: /assets/img/2026-09-03/PXL_20260904_014727176.jpg
+    alt: "A dog in an orange bandana joining the crowd at Rule 4"
 ---
 
 FinOps: Turn your cloud bill from a mystery novel into a strategic superpower!
@@ -67,3 +76,7 @@ You should attend if you are a:
 Before and after the session, stick around to network, share ideas, and meet others building on AWS.
 
 [RSVP today](https://www.meetup.com/boulderawsusergroup/events/315761108/) to save your spot and join a vibrant community of builders!
+
+## Event Photos
+
+{% include photo-carousel.html images=page.gallery id="finops-carousel" %}
