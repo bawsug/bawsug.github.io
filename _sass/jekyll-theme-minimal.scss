@@ -366,3 +366,40 @@ footer {
     color: #c45500;
   }
 }
+
+// Home page post list
+.post-list {
+  list-style: none;
+  padding: 0;
+}
+
+.post-list-item {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+
+  a {
+    flex: 1;
+  }
+
+  time {
+    color: #999;
+    font-size: 0.85em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  &.is-canceled a {
+    text-decoration: line-through;
+    color: #999;
+  }
+}
+
+.post-list-flag {
+  font-size: 0.75em;
+  font-weight: 700;
+  color: #c00;
+  text-transform: uppercase;
+}
