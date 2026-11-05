@@ -350,3 +350,19 @@ footer {
   white-space: nowrap;
   letter-spacing: 10px;
 }
+
+// Site navigation
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+  margin: 0 0 20px;
+
+  a {
+    font-weight: 700;
+  }
+
+  .site-nav-cta {
+    color: #c45500;
+  }
+}
