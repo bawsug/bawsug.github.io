@@ -17,6 +17,8 @@ layout: default
   {% include talk-lineup.html talks=page.talks event_link=page.event_link %}
   {% endif %}
 
+  {% include event-schema.html event=page %}
+
   {% if page.tags %}
   <small>tags: <em>{{ page.tags | join: "</em> - <em>" }}</em></small>
   {% endif %}
