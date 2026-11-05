@@ -13,7 +13,7 @@
     <![endif]-->
     {% include head-custom.html %}
   </head>
-  <body>
+  <body data-timezone="{{ site.timezone }}">
     <div class="wrapper">
       <header>
         <h1><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
@@ -62,5 +62,6 @@
       </footer>
     </div>
     <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
+    <script src="{{ "/assets/js/events.js" | relative_url }}"></script>
   </body>
 </html>

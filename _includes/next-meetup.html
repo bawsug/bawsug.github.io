@@ -1,0 +1,136 @@
+{% comment %}
+  Next Meetup Include
+  Usage: {% include next-meetup.html events=upcoming %}
+  `events` is a list of upcoming posts, soonest first. Every event gets a card,
+  but only the first is visible; assets/js/events.js re-picks the visible card
+  in the browser so the page stays right between site rebuilds.
+{% endcomment %}
+
+<div class="next-meetup">
+  {% for ev in include.events %}
+  {% assign day = ev.date | date: "%Y-%m-%d" %}
+  <article class="next-meetup-card" data-event-day="{{ day }}" data-event-start="{{ ev.start_time }}" data-event-end="{{ ev.end_time }}"{% unless forloop.first %} hidden{% endunless %}>
+    <p class="next-meetup-label">Next Meetup</p>
+    <h2><a href="{{ ev.url | relative_url }}">{{ ev.title }}</a></h2>
+    <p class="next-meetup-meta">{% include event-meta.html event=ev %}</p>
+
+    {% if ev.talks %}
+    <ul class="next-meetup-speakers">
+      {% for talk in ev.talks %}{% for speaker in talk.speakers %}
+      {% assign photo = speaker.photo | strip %}
+      {% assign name_parts = speaker.name | split: " " %}
+      <li>
+        {% if photo != "" %}
+        <img src="{{ photo | relative_url }}" alt="" loading="lazy">
+        {% else %}
+        <span class="next-meetup-initials" aria-hidden="true">{{ name_parts.first | slice: 0 }}{{ name_parts.last | slice: 0 }}</span>
+        {% endif %}
+        <span><strong>{{ speaker.name }}</strong><br><small>{{ speaker.title }}{% if speaker.title and speaker.company %} &middot; {% endif %}{{ speaker.company }}</small></span>
+      </li>
+      {% endfor %}{% endfor %}
+    </ul>
+    {% endif %}
+
+    <p class="next-meetup-actions">
+      {% if ev.event_link %}<a class="btn btn-primary" href="{{ ev.event_link }}">RSVP on Meetup</a>{% endif %}
+      <a class="btn" href="{{ ev.url | relative_url }}">Event details</a>
+    </p>
+  </article>
+  {% endfor %}
+
+  <article class="next-meetup-card next-meetup-tba"{% if include.events.size > 0 %} hidden{% endif %}>
+    <p class="next-meetup-label">Next Meetup</p>
+    <h2>First Thursday of the month</h2>
+    <p>We meet monthly in Boulder. The next event will be announced on Meetup — join the group so you don't miss it.</p>
+    <p class="next-meetup-actions"><a class="btn btn-primary" href="https://www.meetup.com/boulderawsusergroup/">Join on Meetup</a></p>
+  </article>
+</div>
+
+<style>
+.next-meetup-card {
+  margin: 0 0 30px;
+  padding: 24px 28px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #232F3E 0%, #37475A 100%);
+  color: #d5dbe3;
+  box-shadow: 0 8px 30px rgba(35,47,62,0.25);
+}
+.next-meetup-card[hidden] {
+  display: none;
+}
+.next-meetup-card h2,
+.next-meetup-card h2 a {
+  color: #fff;
+  margin: 0 0 8px;
+}
+.next-meetup-card a {
+  color: #FFB84D;
+}
+.next-meetup-label {
+  margin: 0 0 6px;
+  color: #FF9900;
+  font-size: 0.8em;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.next-meetup-meta {
+  margin: 0 0 16px;
+}
+.next-meetup-speakers {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 18px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+}
+.next-meetup-speakers li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  line-height: 1.3;
+}
+.next-meetup-speakers strong {
+  color: #fff;
+}
+.next-meetup-speakers img,
+.next-meetup-initials {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+.next-meetup-initials {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #FF9900;
+  color: #232F3E;
+  font-weight: 700;
+}
+.next-meetup-actions {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.next-meetup-card .btn {
+  display: inline-block;
+  padding: 8px 18px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.35);
+  color: #fff;
+  font-weight: 700;
+}
+.next-meetup-card .btn-primary {
+  background: #FF9900;
+  border-color: #FF9900;
+  color: #232F3E;
+}
+.next-meetup-card .btn:hover {
+  font-weight: 700;
+  filter: brightness(1.1);
+}
+</style>
