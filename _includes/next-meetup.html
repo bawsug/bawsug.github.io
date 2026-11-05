@@ -13,6 +13,7 @@
     <p class="next-meetup-label">Next Meetup</p>
     <h2><a href="{{ ev.url | relative_url }}">{{ ev.title }}</a></h2>
     <p class="next-meetup-meta">{% include event-meta.html event=ev %}</p>
+    <p class="next-meetup-countdown" data-countdown aria-live="polite"></p>
 
     {% if ev.talks %}
     <ul class="next-meetup-speakers">
@@ -75,7 +76,29 @@
   text-transform: uppercase;
 }
 .next-meetup-meta {
+  margin: 0 0 8px;
+}
+.next-meetup-countdown {
+  display: inline-block;
   margin: 0 0 16px;
+  font-weight: 700;
+  color: #FF9900;
+}
+.next-meetup-countdown:empty {
+  display: none;
+}
+.next-meetup-countdown.is-live::before {
+  content: "";
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  margin-right: 8px;
+  border-radius: 50%;
+  background: #ff4d4d;
+  animation: next-meetup-pulse 1.2s ease-in-out infinite;
+}
+@keyframes next-meetup-pulse {
+  50% { opacity: 0.3; }
 }
 .next-meetup-speakers {
   list-style: none;

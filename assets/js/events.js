@@ -50,4 +50,49 @@
     var tba = document.querySelector('.next-meetup-tba');
     if (tba) tba.hidden = !!shown;
   }
+
+  // Today's date in TZ as "YYYY-MM-DD" (en-CA formats dates that way).
+  function today() {
+    return new Intl.DateTimeFormat('en-CA', { timeZone: TZ }).format(new Date());
+  }
+
+  function countdownText(ms) {
+    var mins = Math.floor(ms / 60000);
+    var d = Math.floor(mins / 1440), h = Math.floor(mins % 1440 / 60), m = mins % 60;
+    if (d > 0) return 'Starts in ' + d + 'd ' + h + 'h';
+    if (h > 0) return 'Starts in ' + h + 'h ' + m + 'm';
+    return 'Starts in ' + Math.max(m, 1) + ' min';
+  }
+
+  var countdowns = document.querySelectorAll('[data-countdown]');
+  var banners = document.querySelectorAll('.event-banner');
+
+  function tick() {
+    var now = Date.now();
+
+    countdowns.forEach(function(el) {
+      var w = eventWindow(el.closest('[data-event-day]'));
+      el.classList.toggle('is-live', now >= w.start && now < w.end);
+      el.textContent = now < w.start ? countdownText(w.start - now)
+        : now < w.end ? 'Happening now' : '';
+    });
+
+    // Banner on the day of a meetup, until it ends. Only the first match shows.
+    var shownBanner = false;
+    banners.forEach(function(el) {
+      var w = eventWindow(el);
+      var show = !shownBanner && el.getAttribute('data-event-day') === today() && now < w.end;
+      el.hidden = !show;
+      if (show) {
+        shownBanner = true;
+        var when = el.querySelector('.event-banner-when');
+        when.textContent = when.getAttribute(now >= w.start ? 'data-live' : 'data-soon');
+      }
+    });
+  }
+
+  if (countdowns.length || banners.length) {
+    tick();
+    setInterval(tick, 30000);
+  }
 })();

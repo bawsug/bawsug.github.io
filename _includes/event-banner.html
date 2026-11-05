@@ -1,0 +1,60 @@
+{% comment %}
+  Event Banner Include
+  Usage: {% include event-banner.html %}
+  One hidden banner per upcoming meetup. assets/js/events.js reveals it on the
+  day of the event and swaps the text once the meetup is underway.
+{% endcomment %}
+
+{% assign today = site.time | date: "%Y%m%d" | plus: 0 %}
+{% for post in site.posts %}
+  {% assign post_day = post.date | date: "%Y%m%d" | plus: 0 %}
+  {% if post_day < today %}{% break %}{% endif %}
+  {% unless post.canceled %}
+  {% assign venue = site.data.venues[post.venue] %}
+  <div class="event-banner" data-event-day="{{ post.date | date: '%Y-%m-%d' }}" data-event-start="{{ post.start_time }}" data-event-end="{{ post.end_time }}" hidden>
+    <strong class="event-banner-when" data-soon="Tonight" data-live="Happening now">Tonight</strong>
+    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    {% if post.start_time %}&middot; {{ post.date | date: "%Y-%m-%d" | append: " " | append: post.start_time | date: "%-I:%M %p" }}{% endif %}
+    {% if venue %}at {{ venue.name }}{% endif %}
+    {% if post.event_link %}<a class="event-banner-rsvp" href="{{ post.event_link }}">RSVP</a>{% endif %}
+  </div>
+  {% endunless %}
+{% endfor %}
+
+<style>
+.event-banner {
+  /* Bleed past the body's 50px padding and the browser's 8px margin. */
+  margin: -58px -58px 40px;
+  padding: 12px 50px;
+  background: #FF9900;
+  color: #232F3E;
+  text-align: center;
+}
+.event-banner[hidden] {
+  display: none;
+}
+.event-banner a {
+  color: #232F3E;
+  text-decoration: underline;
+}
+.event-banner-when {
+  margin-right: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.event-banner-rsvp {
+  margin-left: 10px;
+  padding: 3px 12px;
+  border-radius: 6px;
+  background: #232F3E;
+  color: #fff !important;
+  text-decoration: none !important;
+  font-weight: 700;
+}
+@media print, screen and (max-width: 480px) {
+  .event-banner {
+    margin: -23px -23px 20px;
+    padding: 10px 15px;
+  }
+}
+</style>
