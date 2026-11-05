@@ -1,0 +1,97 @@
+{% comment %}
+  Stats Strip Include
+  Usage: {% include stats-strip.html %}
+  Counts every non-canceled post, including scheduled ones, so the numbers
+  match the Speakers page.
+{% endcomment %}
+
+{% assign meetups = 0 %}{% assign talks = 0 %}{% assign photos = 0 %}
+{% assign names = "" | split: "" %}
+{% for post in site.posts %}
+  {% unless post.canceled %}
+    {% assign meetups = meetups | plus: 1 %}
+    {% assign talks = talks | plus: post.talks.size %}
+    {% assign photos = photos | plus: post.gallery.size %}
+    {% for talk in post.talks %}
+      {% assign talk_names = talk.speakers | map: "name" %}
+      {% assign names = names | concat: talk_names %}
+    {% endfor %}
+  {% endunless %}
+{% endfor %}
+{% assign speakers = names | uniq | size %}
+
+<ul class="stats-strip">
+  <li><strong data-count="{{ meetups }}">{{ meetups }}</strong> Meetups</li>
+  <li><strong data-count="{{ talks }}">{{ talks }}</strong> Talks</li>
+  <li><a href="/speakers/"><strong data-count="{{ speakers }}">{{ speakers }}</strong> Speakers</a></li>
+  <li><a href="/photos/"><strong data-count="{{ photos }}">{{ photos }}</strong> Photos</a></li>
+</ul>
+
+<style>
+.stats-strip {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+.stats-strip li {
+  padding: 12px 6px;
+  border-radius: 10px;
+  background: #fff7eb;
+  border: 1px solid #ffe2b8;
+  text-align: center;
+  font-size: 0.85em;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #8a5a14;
+}
+.stats-strip a {
+  color: inherit;
+  display: block;
+}
+.stats-strip a:hover {
+  font-weight: normal;
+}
+.stats-strip li:has(a):hover {
+  border-color: #FF9900;
+}
+.stats-strip strong {
+  display: block;
+  font-size: 2em;
+  line-height: 1.1;
+  color: #232F3E;
+  letter-spacing: 0;
+}
+@media screen and (max-width: 480px) {
+  .stats-strip {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+</style>
+
+<script>
+(function() {
+  // Count up from zero the first time the strip scrolls into view.
+  if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var nums = document.querySelectorAll('.stats-strip [data-count]');
+  var io = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (!e.isIntersecting) return;
+      io.unobserve(e.target);
+      var el = e.target, target = +el.getAttribute('data-count'), t0 = null;
+      function step(ts) {
+        t0 = t0 || ts;
+        var p = Math.min((ts - t0) / 900, 1);
+        el.textContent = Math.round(target * (1 - Math.pow(1 - p, 3)));
+        if (p < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+      // rAF pauses in background tabs; make sure the real number lands.
+      setTimeout(function() { el.textContent = target; }, 1000);
+    });
+  });
+  nums.forEach(function(n) { io.observe(n); });
+})();
+</script>

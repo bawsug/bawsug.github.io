@@ -16,6 +16,8 @@ canceled: false
 
 {% include next-meetup.html events=upcoming %}
 
+{% include stats-strip.html %}
+
 <h1>{{ page.title }}</h1>
 
 {% if upcoming.size > 1 %}
