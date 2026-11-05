@@ -13,6 +13,7 @@ talks:
         photo: "/assets/img/hyperbadge_avanbece.png"
         bio_link: "https://www.linkedin.com/in/andyvanb/"
 tags: [aws, certifications]
+image: /assets/img/andy_gold_jacket.jpg
 ---
 
 Andy shared his journey of earning all AWS certifications and strategies for success. He concluded his talk by revealing the coveted gold jacket - a special prize awarded to those who pass all AWS certifications.

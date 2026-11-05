@@ -17,6 +17,7 @@ talks:
         company: "LucidPoint"
         title: "Chief Executive Officer"
 tags: [aws, finops, cost_optimization, governance, tagging]
+image: /assets/img/2026-09-03/PXL_20260904_003629978.jpg
 gallery:
   - src: /assets/img/2026-09-03/PXL_20260904_003629978.jpg
     alt: "Wide view of the Rule 4 great room with attendees seated for a slide on AWS database options"

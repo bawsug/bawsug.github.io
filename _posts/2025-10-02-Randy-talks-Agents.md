@@ -13,6 +13,7 @@ talks:
         photo: "/assets/img/hyperbadge_rddefauw.png"
         bio_link: "https://www.linkedin.com/in/randalldefauw/"
 tags: [aws, ai, agents]
+image: /assets/img/randy_agents.jpg
 ---
 
 Randy walked us through the current GenAI agentic landscape and the challenges organizations face in the agentic world.

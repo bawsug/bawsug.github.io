@@ -30,6 +30,7 @@ talks:
         photo: "/assets/img/ScottCampbell.jpg"
         bio_link: "https://www.linkedin.com/in/scott-d-campbell-b91b6538/"
 tags: [aws, cloud_security]
+image: /assets/img/meetup2025-11-06.jpg
 ---
 
 Three talks on building AWS security — from the endpoint all the way up to a mature security program.

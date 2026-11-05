@@ -16,6 +16,7 @@ talks:
         photo: "/assets/img/ScottCampbell.jpg"
         bio_link: "https://www.linkedin.com/in/scott-d-campbell-b91b6538/"
 tags: [aws, cloud_security, hackathon, workshop]
+image: /assets/img/2026-03-05/15008.jpg
 gallery:
   - src: /assets/img/2026-03-05/15001.jpg
     alt: "Amazon Meeting venue sign for the March 5th event"
