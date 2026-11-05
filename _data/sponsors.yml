@@ -1,0 +1,16 @@
+# Hosts and sponsors. Posts list theirs by key under `sponsors:`.
+# `logo` is optional; without one the name is shown.
+rule4:
+  name: Rule 4
+  url: https://www.rule4.com
+  role: Venue host
+
+nclouds:
+  name: nClouds
+  url: https://www.nclouds.com
+  role: Hackathon host
+
+futran:
+  name: Futran Solutions
+  url: https://futransolutions.com
+  role: Pitch competition grant

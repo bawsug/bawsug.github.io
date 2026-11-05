@@ -18,6 +18,7 @@ date: YYYY-MM-DD
 start_time: "18:00"      # 24h, Mountain time
 end_time: "20:00"
 venue: rule4             # key in _data/venues.yml
+sponsors: [rule4]        # keys in _data/sponsors.yml
 canceled: false
 event_link: "https://www.meetup.com/boulderawsusergroup/events/ID/"
 talks:

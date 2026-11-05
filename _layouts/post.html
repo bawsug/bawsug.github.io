@@ -17,6 +17,10 @@ layout: default
   {% include talk-lineup.html talks=page.talks event_link=page.event_link %}
   {% endif %}
 
+  {% if page.sponsors %}
+  {% include sponsors.html keys=page.sponsors %}
+  {% endif %}
+
   {% include event-schema.html event=page %}
 
   {% if page.tags %}

@@ -5,6 +5,7 @@ date: 2026-11-05
 start_time: "18:00"
 end_time: "20:00"
 venue: rule4
+sponsors: [rule4]
 canceled: false
 event_link: "https://www.meetup.com/boulderawsusergroup/events/316109089/"
 talks:

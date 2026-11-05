@@ -1,0 +1,78 @@
+{% comment %}
+  Sponsors Include
+  Usage: {% include sponsors.html %}                      all sponsors
+         {% include sponsors.html keys=page.sponsors %}   just this event's
+  Keys refer to _data/sponsors.yml.
+{% endcomment %}
+
+{% if include.keys %}
+  {% assign keys = include.keys %}
+{% else %}
+  {% assign keys = "" | split: "" %}
+  {% for pair in site.data.sponsors %}{% assign keys = keys | push: pair[0] %}{% endfor %}
+{% endif %}
+
+<div class="sponsors{% if include.keys %} sponsors-event{% endif %}">
+  <h3>{% if include.keys %}Thanks to{% else %}Hosts &amp; Sponsors{% endif %}</h3>
+  <ul class="sponsors-list">
+    {% for key in keys %}
+    {% assign sp = site.data.sponsors[key] %}
+    {% if sp %}
+    <li>
+      <a href="{{ sp.url }}">
+        {% if sp.logo %}<img src="{{ sp.logo | relative_url }}" alt="{{ sp.name }}">{% else %}<strong>{{ sp.name }}</strong>{% endif %}
+        <small>{{ sp.role }}</small>
+      </a>
+    </li>
+    {% endif %}
+    {% endfor %}
+  </ul>
+</div>
+
+<style>
+.sponsors {
+  margin: 30px 0;
+}
+.sponsors-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 12px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 10px;
+}
+.sponsors-list a {
+  display: block;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 14px 10px;
+  border-radius: 10px;
+  border: 1px solid #e8e8e8;
+  text-align: center;
+  color: #232F3E;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.sponsors-list a:hover {
+  font-weight: normal;
+  border-color: #FF9900;
+  box-shadow: 0 4px 14px rgba(255,153,0,0.18);
+}
+.sponsors-list strong {
+  display: block;
+  font-size: 1.1em;
+}
+.sponsors-list img {
+  max-width: 100%;
+  max-height: 48px;
+  display: block;
+  margin: 0 auto 6px;
+}
+.sponsors-list small {
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.sponsors-event .sponsors-list {
+  grid-template-columns: repeat(auto-fill, minmax(160px, 220px));
+}
+</style>

@@ -34,3 +34,5 @@ canceled: false
   {% if post_day < today or post.canceled %}{% include post-list-item.html post=post %}{% endif %}
 {% endfor %}
 </ul>
+
+{% include sponsors.html %}
