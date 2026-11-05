@@ -2,6 +2,9 @@
 layout: post
 title: "AWS Cloud Security: Hackathon Workshop"
 date: 2026-03-05
+start_time: "15:00"
+end_time: "17:00"
+venue: nclouds_louisville
 canceled: false
 talks:
   - topic: "AWS Cloud Security: Hackathon Workshop"

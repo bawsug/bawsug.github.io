@@ -2,6 +2,7 @@
 layout: post
 title: "Startup & Small Business AI Pitch Competition"
 date: 2026-06-04
+venue: colorado_quantum_incubator
 canceled: false
 tags: [aws, pitch, startup, small_business, ai]
 ---

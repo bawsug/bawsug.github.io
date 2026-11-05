@@ -2,6 +2,8 @@
 layout: post
 title: "FinOps: Turn Your Cloud Bill Into a Strategic Superpower"
 date: 2026-09-03
+start_time: "18:00"
+venue: rule4
 canceled: false
 event_link: "https://www.meetup.com/boulderawsusergroup/events/315761108/"
 talks:

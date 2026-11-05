@@ -1,0 +1,17 @@
+{% comment %}
+  Event Meta Include
+  Usage: {% include event-meta.html event=page %}
+  Renders "Thursday, November 5, 2026 · 6:00 PM – 8:00 PM · Rule 4, Boulder"
+  from date, start_time, end_time (24h "HH:MM"), and venue (a key in _data/venues.yml).
+{% endcomment %}
+
+{% assign ev = include.event %}
+{% assign day = ev.date | date: "%Y-%m-%d" %}
+{% assign venue = site.data.venues[ev.venue] %}
+<span class="event-meta">
+  <time datetime="{{ day }}{% if ev.start_time %}T{{ ev.start_time }}{% endif %}">{{ ev.date | date: "%A, %B %-d, %Y" }}</time>
+  {%- if ev.start_time %} &middot; {{ day | append: " " | append: ev.start_time | date: "%-I:%M %p" }}
+    {%- if ev.end_time %} &ndash; {{ day | append: " " | append: ev.end_time | date: "%-I:%M %p" }}{% endif %}
+  {%- endif %}
+  {%- if venue %} &middot; {% if venue.url %}<a href="{{ venue.url }}">{{ venue.name }}</a>{% else %}{{ venue.name }}{% endif %}{% if venue.city %}, {{ venue.city }}{% endif %}{% endif %}
+</span>

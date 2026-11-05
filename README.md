@@ -15,6 +15,9 @@ any number of speakers.
 layout: post
 title: "Meetup or Talk Title"
 date: YYYY-MM-DD
+start_time: "18:00"      # 24h, Mountain time
+end_time: "20:00"
+venue: rule4             # key in _data/venues.yml
 canceled: false
 event_link: "https://www.meetup.com/boulderawsusergroup/events/ID/"
 talks:
@@ -53,6 +56,9 @@ hand-write a speaker list in the body.
 - Event photo: `/assets/img/descriptive_name.jpg`
 
 ### Key Points
+- `start_time`, `end_time`, and `venue` drive the date line under the title,
+  the home page "next meetup" card, and Google event data. Add new venues to
+  `_data/venues.yml` instead of repeating the address in every post
 - Date format: YYYY-MM-DD
 - `event_link` belongs to the meetup, so it lives at the top level, not inside a talk
 - Every field except `topic` and `speakers[].name` is optional — omit `photo`

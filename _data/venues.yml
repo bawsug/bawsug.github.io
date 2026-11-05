@@ -1,0 +1,22 @@
+# Venues referenced by `venue:` in post front matter.
+rule4:
+  name: Rule 4
+  url: https://www.rule4.com
+  street: 3002 Bluff Street, Suite 100
+  city: Boulder
+  region: CO
+  postal_code: "80301"
+  note: Historic Steel Yards
+
+nclouds_louisville:
+  name: nClouds
+  url: https://www.nclouds.com
+  street: 550 South McCaslin Blvd Unit B
+  city: Louisville
+  region: CO
+  postal_code: "80027"
+
+colorado_quantum_incubator:
+  name: Colorado Quantum Incubator
+  city: Boulder
+  region: CO
