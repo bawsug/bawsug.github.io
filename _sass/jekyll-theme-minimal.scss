@@ -118,10 +118,11 @@ kbd {
   vertical-align: middle;
 }
 
+// Not fixed: a pinned sidebar taller than the window can't be scrolled,
+// which cut off the nav and footer on shorter screens.
 header {
   width:270px;
   float:left;
-  position:fixed;
   -webkit-font-smoothing:subpixel-antialiased;
 }
 
@@ -206,8 +207,8 @@ hr {
 footer {
   width:270px;
   float:left;
-  position:fixed;
-  bottom:50px;
+  clear:left;
+  padding-top:20px;
   -webkit-font-smoothing:subpixel-antialiased;
 }
 
