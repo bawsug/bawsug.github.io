@@ -21,6 +21,14 @@ talks:
         title: "Solutions Architect"
         bio_link: "https://www.linkedin.com/in/nikhil-karnik/"
 tags: [aws, generative_ai, bedrock, agentcore, architecture]
+image: /assets/img/2026-11-05/PXL_20261106_015240678.jpg
+gallery:
+  - src: /assets/img/2026-11-05/PXL_20261106_015240678.jpg
+    alt: "Title slide reading Architecting Outcomes with AWS AI, POC to PROD, in the Rule 4 great room"
+  - src: /assets/img/2026-11-05/PXL_20261106_020229451.jpg
+    alt: "Presenter at the podium introducing Ava, a hypothetical customer-support agent followed through the talk"
+  - src: /assets/img/2026-11-05/PXL_20261106_022418998.jpg
+    alt: "Laptop showing this event's page on bawsug.github.io while The Employee Discount Story slide plays up front"
 ---
 
 Still stuck in POC purgatory? Let's turn your AWS AI experiments into REAL business value.
@@ -72,3 +80,7 @@ You should attend if you are a:
 Before and after the session, stick around to network, share ideas, and meet others building on AWS.
 
 [RSVP today](https://www.meetup.com/boulderawsusergroup/events/316109089/) to save your spot and join a vibrant community of builders!
+
+## Event Photos
+
+{% include photo-carousel.html images=page.gallery id="poc-purgatory-carousel" %}
